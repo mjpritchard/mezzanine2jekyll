@@ -5,7 +5,7 @@ blog posts to Jekyll post files.
 
 ## Usage
 
-1. Install the package in your virtualenv:
+1. Install the [package](https://pypi.python.org/pypi/mezzanine2jekyll) in your virtualenv:
 
 ```
 $ pip install mezzanine2jekyll
