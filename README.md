@@ -7,24 +7,24 @@ blog posts to Jekyll post files.
 
 1. Install the [package](https://pypi.python.org/pypi/mezzanine2jekyll) in your virtualenv:
 
-```
-$ pip install mezzanine2jekyll
-```
+    ```
+    $ pip install mezzanine2jekyll
+    ```
 
 2. Add `mezzanine2jekyll` to your `INSTALLED_APPS`:
 
-```python
-INSTALLED_APPS = (
-    ...
-    "mezzanine2jekyll",
-)
-```
+    ```python
+    INSTALLED_APPS = (
+        ...
+        "mezzanine2jekyll",
+    )
+    ```
 
 3. Use the new management command to export:
 
-```
-$ python manage.py mezzanine2jekyll -h
-Usage: manage.py mezzanine2jekyll [options] 
+    ```
+    $ python manage.py mezzanine2jekyll -h
+    Usage: manage.py mezzanine2jekyll [options] 
 
-Export Mezzanine blog posts as Jekyll files
-```
+    Export Mezzanine blog posts as Jekyll files
+    ```
