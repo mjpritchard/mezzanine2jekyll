@@ -10,6 +10,8 @@ class Command(BaseCommand):
         parser.add_argument('output_dir', help='Where to put the outputted Jekyll files')
 
     def handle(self, *args, **options):
+        output_dir = options['output_dir']
+
         for post in BlogPost.objects.all():
             header = {
                 'layout': 'post',
@@ -18,7 +20,6 @@ class Command(BaseCommand):
                 'categories': ' '.join([str(kw) for kw in post.keywords.all()]),
             }
 
-            output_dir = args[0]
             filename = '{d.year:02}-{d.month:02}-{d.day:02}-{slug}.markdown'.format(
                     d=post.publish_date, slug=post.slug)
 
