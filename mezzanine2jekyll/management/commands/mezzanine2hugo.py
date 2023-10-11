@@ -58,9 +58,12 @@ class Command(BaseCommand):
 
                 print("DEST:", dest_file)
                 thumbnail = dest_file
+                icon = ""
 
             except ValueError:
+                # if no thumbnail, set to blank & set an icon instead
                 thumbnail=""
+                icon = "fas circle-info"
 
             #TODO check image size options
 
@@ -69,7 +72,8 @@ class Command(BaseCommand):
                 'date': post.publish_date,
                 'tags': tags,
                 'aliases': aliases,
-                'thumbnail': thumbnail
+                'thumbnail': thumbnail,
+                'icon': icon
             }
 
             filename = '{d.year:02}-{d.month:02}-{d.day:02}-{slug}.md'.format(
