@@ -3,6 +3,8 @@
 This is a Django management command to add support for exporting Mezzanine's
 blog posts to Jekyll post files.
 
+Adapted from https://github.com/sjkingo/mezzanine2jekyll
+
 ## Usage
 
 1. Install the [package](https://pypi.python.org/pypi/mezzanine2jekyll) in your virtualenv:
